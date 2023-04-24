@@ -1,12 +1,19 @@
 body{
-    margin-top: 0;
-    margin-left: 0;
     margin: 0;
 }
 header{
+  display: flex; /* Lägg till flexbox-layout */
+  justify-content: space-between; /* Placera elementen jämnt mellanrum */
+  align-items: center; /* Centrera vertikalt */
+    height: 10vh;
+    background-color: red;
+}
 
-    height: 25vh;
-    background-image: url("Netflix_header.jpg");
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 1vw);
 }
 /* The sidebar menu */
 .sidebar {
@@ -48,11 +55,14 @@ header{
   
   /* The button used to open the sidebar */
   .menubtn {
-    font-size: 20px;
+    margin-right: 10vw;
+    left: 1vw;
+    position: absolute;
+    font-size: 4vh;
     cursor: pointer;
     background-color: #111;
     color: white;
-    padding: 10px 15px;
+    padding: 1vh 1vw;
     border: none;
   }
   
@@ -62,43 +72,22 @@ header{
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1vh;
   }
   
+  #main img{
+    width:auto;
+    height:10vh;
+    }
+  
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
-nav{
-    padding-top: 15vh;
-}
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-    
-nav li {
-    float: left;
-}
-        
-nav li a {
-    display: block;
-    color: aliceblue;
-    text-align: center;
-    padding: 14px 18vw;
-    text-decoration: none;
-    font-size: large;
-}
-        
-nav li a:hover {
-    background-color: #564d4d;
-}
+
 
 main{
-    height: 50vh;
+    height: 65vh;
 }
 
 footer{
@@ -108,16 +97,26 @@ footer{
     align-items: center; /* Centrera vertikalt */
     background-color: #564d4d;
     height: 25vh;
+    font-size: 2vh;
+    width: 100vw;
+    margin:0;
 }
 footer ul{
+  width: 20vw;
     list-style: none;
 }
-#Contact {
-    width: 20vw;
+
+@media screen and (max-width: 670px) {
+header{
+  background-color: aqua;
 }
-#Socialmedia{
-    width: 20vw;
+footer {
+  flex-direction: column;
+  align-items:flex-start;
+  height: auto;
 }
-#Location {
-    width: 20vw;
+footer ul{
+  width: auto;
 }
+
+  }
