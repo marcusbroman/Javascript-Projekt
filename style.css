@@ -6,7 +6,7 @@ header{
   justify-content: space-between; /* Placera elementen jämnt mellanrum */
   align-items: center; /* Centrera vertikalt */
     height: 10vh;
-    background-color: red;
+    background-color: aqua;
 }
 
 nav{
@@ -41,7 +41,7 @@ nav{
   
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
-    color: #f1f1f1;
+    color: aliceblue;
   }
   
   /* Position and style the close button (top right corner) */
@@ -61,7 +61,7 @@ nav{
     font-size: 4vh;
     cursor: pointer;
     background-color: #111;
-    color: white;
+    color: aliceblue;
     padding: 1vh 1vw;
     border: none;
   }
@@ -71,7 +71,7 @@ nav{
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
+  #main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ nav{
 
 
 main{
-    height: 65vh;
+    height: auto;
 }
 
 footer{
@@ -106,10 +106,11 @@ footer ul{
     list-style: none;
 }
 
-@media screen and (max-width: 670px) {
-header{
-  background-color: aqua;
+#main h1{
+  opacity: 0;
 }
+
+@media screen and (max-width: 670px) {
 footer {
   flex-direction: column;
   align-items:flex-start;
@@ -118,5 +119,29 @@ footer {
 footer ul{
   width: auto;
 }
-
+#main img{
+  width:70vw;
+}
   }
+
+#movie{
+  display: flex;
+  align-items: center; /* Centrerar vertikalt */
+  justify-content: center; /* Centrerar horisontellt */
+  height: 65vh; 
+}
+#movieform{
+    background-color: #818181 ;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    border-radius: 15px;
+    max-height: 65vh;
+}
+#movieform ::placeholder{
+  text-align: center;
+}
