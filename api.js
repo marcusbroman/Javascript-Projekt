@@ -4,7 +4,12 @@ function setupForm() {
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
 event.preventDefault()
-document.getElementById("searching").src = "searching.gif"
+document.querySelector(`.movieposter`).innerHTML = ""
+document.getElementById("title").innerHTML = ""
+const searching = document.createElement("img");
+searching.src = "searching.gif";
+searching.style.width = "12vw";
+document.querySelector(`.movieposter`).appendChild(searching);
 
 const keyword = document.getElementById("keyword").value
 const genre = document.getElementById("genre").value
@@ -29,13 +34,18 @@ async function response(url, options) {
     console.log(result);
     x = Math.floor(Math.random()* result.results.length)
     console.log(x)
-      const poster = result.results[x].image.url
+    let poster 
+    if(result.results[x].image && result.results[x].image.url){
+      poster = result.results[x].image.url
+    }
+    else{
+      poster = "noImg.png"
+    }
       const movie = `<img src="${poster}">`
       const title = result.results[x].title
       console.log(title)
       document.querySelector(`.movieposter`).innerHTML = ""
       document.getElementById("title").innerHTML = ""
-      document.getElementById("searching").src = ""
       document.querySelector(`.movieposter`).innerHTML += movie
       document.getElementById("title").innerHTML += title
     return result;
