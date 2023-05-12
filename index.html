@@ -1,3 +1,4 @@
+<html>
 <head>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +30,7 @@
     <main>
         <div id="movie">
             <div id="movieform">
-                <form>
+                <form id="form">
                     <h1>Choose Your Movie</h1>
                     <br>
                     <label for="keyword">Keyword for the movie</label>
@@ -58,7 +59,7 @@
                     </select>
                     <br>
                     <br>
-                    <label for="number">Minimum Rating</label>
+                    <label for="number">Minimum Rating (1-9)</label>
                     <br>
                     <br>
                     <input type="number" id="rating" name="rating" placeholder="Rating" min="1.0" max="9.9">
@@ -86,11 +87,24 @@
                         <option value="in">India</option>
 
                     </select>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
 
                 </form>
+
+            </div>
+            <div id="search">
+                <img src="" alt="" id="searching">
             </div>
             <div id="movieresult">
+                <div class="movieposter">
+                </div>
+                <div id="title">
+                    <h2></h2>
+                </div>
             </div>
+
         </div>
     </main>
     <footer>
@@ -119,3 +133,4 @@
     </div>
     </footer>
 </body>
+</html>
