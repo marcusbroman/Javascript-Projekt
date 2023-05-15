@@ -1,5 +1,4 @@
 function setupForm() {
-  
 
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
@@ -41,8 +40,8 @@ async function response(url, options) {
     else{
       poster = "noImg.png"
     }
-      const movie = `<img src="${poster}">`
-      const title = result.results[x].title
+    const title = result.results[x].title
+      const movie = `<img src="${poster}" alt="${title}">`
       console.log(title)
       document.querySelector(`.movieposter`).innerHTML = ""
       document.getElementById("title").innerHTML = ""
@@ -52,10 +51,26 @@ async function response(url, options) {
   }
    catch (error) {
     console.error(error);
+    document.getElementById("title").innerHTML = "Couldn't found the movie"
   }
 }
 
 response(url, options);
 })
 }
-document.addEventListener("DOMContentLoaded", setupForm)
+
+function searchForm() {
+  console.log("test")
+
+}
+
+window.onload = function() {
+let title =  document.title
+console.log(title)
+if(title = "Movie Generator"){
+  document.addEventListener("DOMContentLoaded", setupForm)
+}
+else{
+  document.addEventListener("DOMContentLoaded", searchForm)
+}
+}

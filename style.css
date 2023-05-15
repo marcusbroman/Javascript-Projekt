@@ -216,3 +216,39 @@ div#movieresult {
 #submit:hover{
   background-image:linear-gradient( #252773, #0dbcbc);
 }
+#moviesearch{
+  margin: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerar vertikalt */
+  justify-content: space-between; /* Centrerar horisontellt */
+}
+#searchtitle{
+  background-color: #818181;
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+#search{
+  height: 7vh;
+  width: 30vw;
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 10px;
+}
+#search::placeholder{
+  text-align: center;
+}
+table{
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 10px;
+}
+tr:nth-child(even){
+  background-color: #818181;
+}
+tr:nth-child(odd){
+  background-color: #444;
+}
