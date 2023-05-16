@@ -1,135 +1,138 @@
 <html>
-<head>
-    <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="api.js"></script>
     <title>Movie Generator</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <nav>
-        
         <div id="mySidebar" class="sidebar">
-            
-            <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-            <a href="index.html">Movie Generator</a>
-            <a href="moviesearch.html">Movie Search</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-          </div>
-          
-          <div id="main">
-            <button class="menubtn" id="menuBtn">&#9776;</button>
-            <script src="script.js"></script>
-            <img src="Netflixdatabaselogo-removebg-preview (2).png" alt="Netflix Movie Database">
-            
-          </div>
-          
-      </nav> 
-      
+          <a href="javascript:void(0)" class="closebtn" id="closeBtn"
+            >&times;</a
+          >
+          <a href="index.html">Movie Generator</a>
+          <a href="moviesearch.html">Movie Search</a>
+          <a href="Contact.html">Contact</a>
+          <a href="#"></a>
+        </div>
+
+        <div id="main">
+          <button class="menubtn" id="menuBtn">&#9776;</button>
+          <script src="script.js"></script>
+          <a href="index.html"
+            ><img
+              src="Netflixdatabaselogo-removebg-preview (2).png"
+              alt="Netflix Movie Database"
+          /></a>
+        </div>
+      </nav>
     </header>
     <main>
-        <div id="movie">
-            <div id="movieform">
-                <form id="form">
-                    <h1>Choose Your Movie</h1>
-                    <br>
-                    <label for="keyword">Keyword for the movie</label>
-                    <br>
-                    <br>
-                    <input type="text" id="keyword" placeholder="Choose a keyword">
-                    <br>
-                    <br>
-                    <label for="genre">Movie Genre</label>
-                    <br>
-                    <br>
-                    <select name="Genre" id="genre">
-                        <option value="">Select Genre</option>
-                        <option value="comedy">Comedy</option>
-                        <option value="horror">Horror</option>
-                        <option value="romance">Romance</option>
-                        <option value="thriller">Thriller</option>
-                        <option value="sci-fi">Sci-fi</option>
-                        <option value="drama">Drama</option>
-                        <option value="action">Action</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="family">Family</option>
-                        <option value="musical">Musical</option>
-                        <option value="history">History</option>
-                    </select>
-                    <br>
-                    <br>
-                    <label for="number">Minimum Rating (1-9)</label>
-                    <br>
-                    <br>
-                    <input type="number" id="rating" name="rating" placeholder="Rating" min="1.0" max="9.9">
-                    <br>
-                    <br>
-                    <label for="date">Oldest Releasedate</label>
-                    <br>
-                    <br>
-                    <input type="date" id="release" placeholder="Oldest Release Date">
-                    <br>
-                    <br>
-                    <label for="Country">Production Country</label>
-                    <br>
-                    <br>
-                    <select name="country" id="country">
-                        <option value="">Select Country</option>
-                        <option value="se">Sweden</option>
-                        <option value="us">Untited States</option>
-                        <option value="gb">United Kingdom</option>
-                        <option value="ca">Canada</option>
-                        <option value="de">Germany</option>
-                        <option value="fr">France</option>
-                        <option value="it">Italy</option>
-                        <option value="cn">China</option>
-                        <option value="in">India</option>
-
-                    </select>
-                    <br>
-                    <br>
-                    <input type="submit" value="Generate Movie" id="submit">
-
-                </form>
-
-            </div>
-            <div id="movieresult">
-                <div class="movieposter">
-                </div>
-                <div id="title">
-                    <h2></h2>
-                </div>
-            </div>
-
+      <div id="movie">
+        <div id="movieform">
+          <form id="form">
+            <h1>Choose Your Movie</h1>
+            <br />
+            <label for="keyword">Keyword for the movie</label>
+            <br />
+            <br />
+            <input type="text" id="keyword" placeholder="Choose a keyword" />
+            <br />
+            <br />
+            <label for="genre">Movie Genre</label>
+            <br />
+            <br />
+            <select name="Genre" id="genre">
+              <option value="">Select Genre</option>
+              <option value="comedy">Comedy</option>
+              <option value="horror">Horror</option>
+              <option value="romance">Romance</option>
+              <option value="thriller">Thriller</option>
+              <option value="sci-fi">Sci-fi</option>
+              <option value="drama">Drama</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="family">Family</option>
+              <option value="musical">Musical</option>
+              <option value="history">History</option>
+            </select>
+            <br />
+            <br />
+            <label for="number">Minimum Rating (1-9)</label>
+            <br />
+            <br />
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              placeholder="Rating"
+              min="1.0"
+              max="9.9"
+            />
+            <br />
+            <br />
+            <label for="date">Oldest Releasedate</label>
+            <br />
+            <br />
+            <input type="date" id="release" placeholder="Oldest Release Date" />
+            <br />
+            <br />
+            <label for="Country">Production Country</label>
+            <br />
+            <br />
+            <select name="country" id="country">
+              <option value="">Select Country</option>
+              <option value="se">Sweden</option>
+              <option value="us">Untited States</option>
+              <option value="gb">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="de">Germany</option>
+              <option value="fr">France</option>
+              <option value="it">Italy</option>
+              <option value="cn">China</option>
+              <option value="in">India</option>
+            </select>
+            <br />
+            <br />
+            <input type="submit" value="Generate Movie" class="submit" />
+          </form>
         </div>
+        <div id="movieresult">
+          <div class="movieposter"></div>
+          <div id="title">
+            <h2></h2>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-        <div id="Contact">
+      <div>
         <ul>
-            <h3>Contact</h3>
-            <li>Phone: 0201 604 327</li>
-            <li>Email: netflixmoviedatabase@gmail.com</li>
-            <li>Adress: Netflixvägen 7</li>
+          <h3>Contact</h3>
+          <li>Phone: 0201 604 327</li>
+          <li>Email: netflixmoviedatabase@gmail.com</li>
+          <li><a href="Contact.html">Contact Form</a></li>
         </ul>
-    </div>
-    <div id="Socialmedia">
+      </div>
+      <div>
         <ul>
-            <h3>Social Media</h3>
-            <li>Instagram: @netflix</li>
-            <li>Facebook: @netflix</li>
-            <li>Youtube: netflix</li>
+          <h3>Social Media</h3>
+          <li>Instagram: @netflix</li>
+          <li>Facebook: @netflix</li>
+          <li>Youtube: netflix</li>
         </ul>
-    </div>
-    <div id="Location">
+      </div>
+      <div>
         <ul>
-            <h3>Location</h3>
-            <li>Adress: Netflixvägen 7</li>
-            <li>Zip code: 720 046</li>
+          <h3>Location</h3>
+          <li>Adress: Netflixvägen 7</li>
+          <li>Zip code: 720 046</li>
         </ul>
-    </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
