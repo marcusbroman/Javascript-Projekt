@@ -5,7 +5,7 @@ function searchForm() {
       event.preventDefault();
 
       const searchWord = document.getElementById("search").value;
-      console.log(searchWord);
+
       const url =
         "https://online-movie-database.p.rapidapi.com/title/v2/find?title=" +
         searchWord +
@@ -19,12 +19,10 @@ function searchForm() {
         },
       };
 
-      async function response(url, options) {
+      async function apiResponse(url, options) {
         try {
           const response = await fetch(url, options);
           const result = await response.json();
-          console.log(result);
-          console.log(result.results.length);
 
           const tableHead = document.createElement("thead");
           const tableHeadRow = document.createElement("tr");
@@ -56,7 +54,7 @@ function searchForm() {
             const title = result.results[i].title;
             const titleType = result.results[i].titleType;
             const year = result.results[i].year;
-            console.log(title, titleType, year);
+
             const movieTable = document.createElement("tr");
             const titleTable = document.createElement("td");
             const titleTypeTable = document.createElement("td");
@@ -69,7 +67,6 @@ function searchForm() {
             movieTable.appendChild(titleTypeTable);
             movieTable.appendChild(yearTable);
 
-            console.log(movieTable);
             tableBody.appendChild(movieTable);
           }
 
@@ -84,7 +81,7 @@ function searchForm() {
         }
       }
 
-      response(url, options);
+      apiResponse(url, options);
     }
   });
 }

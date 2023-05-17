@@ -14,7 +14,6 @@ function setupForm() {
     const rating = document.getElementById("rating").value;
     const release = document.getElementById("release").value;
     const country = document.getElementById("country").value;
-    console.log(keyword, genre, rating, release, country);
 
     const url =
       "https://online-movie-database.p.rapidapi.com/title/v2/find?title=" +
@@ -36,13 +35,12 @@ function setupForm() {
       },
     };
 
-    async function response(url, options) {
+    async function apiResponse(url, options) {
       try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         x = Math.floor(Math.random() * result.results.length);
-        console.log(x);
+
         let poster;
         if (result.results[x].image && result.results[x].image.url) {
           poster = result.results[x].image.url;
@@ -51,7 +49,7 @@ function setupForm() {
         }
         const title = result.results[x].title;
         const movie = `<img src="${poster}" alt="${title}">`;
-        console.log(title);
+
         document.querySelector(`.movieposter`).innerHTML = "";
         document.getElementById("title").innerHTML = "";
         document.querySelector(`.movieposter`).innerHTML += movie;
@@ -63,7 +61,7 @@ function setupForm() {
       }
     }
 
-    response(url, options);
+    apiResponse(url, options);
   });
 }
 

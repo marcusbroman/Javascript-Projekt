@@ -10,7 +10,6 @@ function action() {
   const message = document.getElementById("message");
 
   function openNav() {
-    console.log(document.body.clientWidth);
     if (document.getElementById("mySidebar").style.width == "22vw") {
       closeNav();
     } else if (document.body.clientWidth <= 670) {
