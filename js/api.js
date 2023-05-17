@@ -5,7 +5,7 @@ function setupForm() {
     document.querySelector(`.movieposter`).innerHTML = "";
     document.getElementById("title").innerHTML = "";
     const searching = document.createElement("img");
-    searching.src = "searching.gif";
+    searching.src = "../Images/searching.gif";
     searching.style.width = "12vw";
     document.querySelector(`.movieposter`).appendChild(searching);
 
@@ -25,6 +25,8 @@ function setupForm() {
       genre +
       "&primaryCountry=" +
       country +
+      "&releaseDateMin=" +
+      release +
       "";
     const options = {
       method: "GET",
@@ -45,7 +47,7 @@ function setupForm() {
         if (result.results[x].image && result.results[x].image.url) {
           poster = result.results[x].image.url;
         } else {
-          poster = "noImg.png";
+          poster = "../Images/noImg.png";
         }
         const title = result.results[x].title;
         const movie = `<img src="${poster}" alt="${title}">`;

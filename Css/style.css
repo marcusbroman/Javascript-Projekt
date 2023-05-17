@@ -5,9 +5,9 @@ body {
   overflow-x: hidden;
 }
 header {
-  display: flex; /* Lägg till flexbox-layout */
-  justify-content: space-between; /* Placera elementen jämnt mellanrum */
-  align-items: center; /* Centrera vertikalt */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 10vh;
   background-color: aqua;
 }
@@ -18,21 +18,20 @@ nav {
   align-items: center;
   width: calc(100% - 1vw);
 }
-/* The sidebar menu */
+
 .sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 10vh; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 10vh;
+  transition: 0.5s;
 }
 
-/* The sidebar links */
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -42,12 +41,10 @@ nav {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
   color: aliceblue;
 }
 
-/* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
@@ -56,7 +53,6 @@ nav {
   margin-left: 10vw;
 }
 
-/* The button used to open the sidebar */
 .menubtn {
   margin-right: 10vw;
   left: 1vw;
@@ -73,7 +69,6 @@ nav {
   background-color: #444;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   display: flex;
   justify-content: center;
@@ -86,19 +81,17 @@ nav {
   height: 10vh;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
 main {
-  background-image: url(moviebackground.jpg);
+  background-image: url(..//Images/moviebackground.jpg);
   height: auto;
   overflow-x: hidden;
 }
 
 footer {
   list-style: none;
-  display: flex; /* Lägg till flexbox-layout */
-  justify-content: space-between; /* Placera elementen jämnt mellanrum */
-  align-items: center; /* Centrera vertikalt */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #564d4d;
   height: 25vh;
   font-size: 2vh;
@@ -155,8 +148,8 @@ footer a {
 
 #movie {
   display: flex;
-  align-items: center; /* Centrerar vertikalt */
-  justify-content: space-between; /* Centrerar horisontellt */
+  align-items: center;
+  justify-content: space-between;
   height: 80vh;
 }
 #movieform {
@@ -219,8 +212,8 @@ footer a {
   margin: 1vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrerar vertikalt */
-  justify-content: space-between; /* Centrerar horisontellt */
+  align-items: center;
+  justify-content: space-between;
 }
 #searchtitle {
   background-color: #818181;
@@ -242,17 +235,31 @@ table {
   border-color: aqua;
   border-radius: 10px;
 }
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
   background-color: #818181;
 }
-tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
   background-color: #444;
 }
-tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
   color: aliceblue;
 }
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
   color: rgb(42, 37, 37);
+}
+thead tr {
+  background-color: #111;
+  color: white;
+}
+tfoot tr {
+  background-color: #111;
+  color: white;
+}
+table {
+  border-spacing: 0;
+}
+td {
+  padding-left: 0.5vw;
 }
 main {
   min-height: 65vh;
@@ -261,8 +268,8 @@ main {
   margin: 1vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrerar vertikalt */
-  justify-content: space-between; /* Centrerar horisontellt */
+  align-items: center;
+  justify-content: space-between;
 }
 #contact {
   padding-left: 1vw;
@@ -279,5 +286,11 @@ label {
   text-align: center;
 }
 form ::placeholder {
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+option {
   text-align: center;
 }
