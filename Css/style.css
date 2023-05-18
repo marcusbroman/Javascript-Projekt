@@ -106,40 +106,6 @@ footer a {
   color: #111;
 }
 
-@media screen and (max-width: 670px) {
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
-  footer ul {
-    width: auto;
-  }
-  #navobjects img {
-    width: 70vw;
-  }
-  #movie {
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  main {
-    height: -webkit-fill-available;
-  }
-  #movieform {
-    margin-top: 5vh;
-    height: fit-content;
-  }
-  div#movieresult {
-    flex-direction: row;
-  }
-  #title {
-    margin: 0;
-    flex: 1;
-    max-width: 100vw;
-  }
-}
-
 #movie {
   display: flex;
   align-items: center;
@@ -157,6 +123,9 @@ footer a {
   border-color: aqua;
   border-radius: 10px;
   border-width: 0.5vw;
+}
+option {
+  text-align: center;
 }
 .movieposter {
   margin-right: 15vw;
@@ -259,9 +228,9 @@ td {
 #contactdiv {
   margin: 1vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #contact {
   padding-left: 1vw;
@@ -274,6 +243,14 @@ td {
   background-color: #818181;
   padding-bottom: 1vh;
 }
+#location {
+  background-color: #818181;
+  border-style: solid;
+  border-color: aqua;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2vw;
+}
 label {
   text-align: center;
 }
@@ -283,6 +260,39 @@ form ::placeholder {
 input {
   text-align: center;
 }
-option {
-  text-align: center;
+@media screen and (max-width: 670px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  footer ul {
+    width: auto;
+  }
+  #navobjects img {
+    width: 70vw;
+  }
+  #movie {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main {
+    height: -webkit-fill-available;
+  }
+  #movieform {
+    margin-top: 5vh;
+    height: fit-content;
+  }
+  div#movieresult {
+    flex-direction: row;
+  }
+  #title {
+    margin: 0;
+    flex: 1;
+    max-width: 100vw;
+  }
+  #contactdiv {
+    flex-direction: column;
+  }
 }

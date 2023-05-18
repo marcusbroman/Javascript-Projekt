@@ -29,6 +29,7 @@ function searchForm() {
           const tableTitle = document.createElement("th");
           const tableTitleType = document.createElement("th");
           const tableYear = document.createElement("th");
+          const tableBody = document.createElement("tbody");
           const amountFoot = document.createElement("tfoot");
           const amountRow = document.createElement("tr");
           const amountTitle = document.createElement("td");
@@ -43,12 +44,10 @@ function searchForm() {
           tableHeadRow.appendChild(tableTitleType);
           tableHeadRow.appendChild(tableYear);
           tableHead.appendChild(tableHeadRow);
-          amountFoot.appendChild(amountRow);
           amountRow.appendChild(amountTitle);
           amountRow.appendChild(amount);
           amountRow.appendChild(emptyTd);
-
-          const tableBody = document.createElement("tbody");
+          amountFoot.appendChild(amountRow);
 
           for (let i = 0; i < result.results.length; i++) {
             const title = result.results[i].title;
